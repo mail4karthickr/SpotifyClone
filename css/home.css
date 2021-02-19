@@ -3,10 +3,11 @@
 :root {
   --dark-color: #000000;
   --light-color: #ffffff;
-  --primary-color: #2a39ac;
+  --primary-color: #2c3cb5;
   --accent-color: #00d35b;
-  --accent-color-brightness: #2a39ac;
+  --accent-color-brightness: #2d3db9;
   --heading-text-color: #86898b;
+  --gray-1: #919496;
 }
 
 * {
@@ -41,6 +42,7 @@ ul {
 .navbar {
   position: fixed;
   top: 0;
+  z-index: 1;
   width: 100%;
   padding: 15px;
   background-color: var(--dark-color);
@@ -63,7 +65,7 @@ ul {
 
 .navbar ul {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 .navbar a {
@@ -86,17 +88,22 @@ ul {
   background-position: 46% 4%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
   min-height: 846px;
+  height: 100vh;
 }
 
 .getSpotify .flex {
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  overflow: hidden;
 }
-.getSpotify .container {
-  padding: 140px 40px;
+
+.getSpotify .heading {
+  width: 800px;
+  text-indent: -2em;
+  transform: translate(170px, 0px);
 }
 
 .getSpotify .sm {
@@ -187,6 +194,8 @@ ul {
   color: var(--accent-color);
 }
 
+/* Footer */
+
 .footer a:hover {
   color: var(--accent-color);
 }
@@ -197,4 +206,47 @@ ul {
 
 .footer * > a {
   margin: 10px 0px;
+}
+
+.column-title {
+  font-size: 12px;
+  color: var(--gray-1);
+}
+
+.second-column .policy > *,
+.second-column .copyright > *,
+.second-column .copyright a {
+  color: var(--gray-1);
+}
+
+@media (max-width: 1200px) {
+  /* .getSpotify .container {
+    padding-top: 250px;
+  } */
+
+  .getSpotify .heading {
+    text-indent: 0em;
+    font-size: 94px;
+  }
+
+  .getSpotify {
+    background: url(/images/bursts-tablet.svg) no-repeat;
+    height: 100vh;
+    background-size: 153%;
+    background-position: right 40% center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 990px) {
+  .navbar nav {
+    display: none;
+  }
+
+  .logo {
+    max-width: 90px;
+    max-height: 90px;
+  }
 }

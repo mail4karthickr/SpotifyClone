@@ -1,5 +1,5 @@
 .container {
-  max-width: 1100px;
+  max-width: 1275px;
   margin: 0 auto;
   overflow: auto;
   padding: 0 40px;
@@ -109,10 +109,6 @@
 
 .text-dark {
   color: var(--dark-color);
-}
-
-.heading-text {
-  color: var(--heading-text-color);
 }
 
 /* FontWeights */
