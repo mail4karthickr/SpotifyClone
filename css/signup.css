@@ -1,0 +1,50 @@
+.signup .container {
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.signup .logo {
+  width: 40px;
+  height: 40px;
+}
+
+.signup .flex {
+  gap: 20px;
+}
+
+.signup .btn-facebook-signup {
+  color: #ffffff;
+  background-color: rgb(50, 76, 137);
+}
+
+.signup .btn-facebook-signup:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+.signup .form-divider {
+  border-top: 100px solid gray;
+}
+
+.signup a {
+  text-decoration: underline;
+}
+
+.signup .signup-form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  padding: 0;
+  gap: 20px;
+}
+
+.signup-form-container > * {
+  width: 100%;
+  align-self: center;
+  justify-content: center;
+}
+
+.input[type="radio"] {
+  margin-top: -1px;
+  vertical-align: middle;
+}

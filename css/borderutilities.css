@@ -1,0 +1,17 @@
+.border {
+  border: 1px solid;
+  outline: none;
+  color: rgb(181, 181, 181);
+}
+
+.color-red {
+  color: rgb(0, 178, 80);
+}
+
+.color-white {
+  color: #ffffff;
+}
+
+.border-none {
+  border: none;
+}

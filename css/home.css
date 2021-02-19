@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+:root {
+  --dark-color: #000000;
+  --light-color: #ffffff;
+  --primary-color: #2a39ac;
+  --accent-color: #00d35b;
+  --accent-color-brightness: #2a39ac;
+  --heading-text-color: #86898b;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Circular, spotify-circular, Helvetica, Arial, sans-serif;
+  color: #333333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.form-control {
+  margin: auto;
+  width: 100%;
+  background-color: blue;
+  align-self: center;
+  padding: 20px;
+  height: 100%;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  background-color: var(--dark-color);
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.vl {
+  height: 16px;
+  width: 1px;
+  background: #ffffff;
+  margin: auto 17px;
+}
+
+/* NavBar */
+.navbar .flex {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+}
+
+.navbar a:hover {
+  color: var(--accent-color);
+}
+
+.logo {
+  max-width: 140px;
+  max-height: 140px;
+}
+
+/* GetSpotify */
+.getSpotify {
+  background: url(/images/bursts.svg) no-repeat;
+  background-size: 175%;
+  background-position: 46% 4%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 846px;
+}
+
+.getSpotify .flex {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 40px;
+}
+.getSpotify .container {
+  padding: 140px 40px;
+}
+
+.getSpotify .sm {
+  font-size: 0.8rem;
+}
+
+.getSpotify .md {
+  font-size: 1rem;
+}
+
+.getSpotify .xl {
+  font-size: 9rem;
+}
+
+.getSpotify .buyBtn {
+  padding: 10px 30px;
+  transition: 0.3s;
+}
+
+.getSpotify .buyBtn:hover {
+  background-color: white;
+}
+
+/* Footer */
+.footer {
+  padding: 100px 0 0;
+  height: 500px;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.footer .first-column {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer a {
+  color: white;
+}
+
+.company,
+.communities,
+.useful-links {
+  display: flex;
+  flex-direction: column;
+  /* background-color: beige; */
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  /* background-color: chartreuse; */
+}
+
+.footer .second-column {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+.second-column .policy {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.fa-stack i:hover {
+  color: var(--accent-color);
+}
+
+.second-column .copyright {
+  display: flex;
+  flex-direction: column;
+}
+
+.second-column .footer a:hover {
+  color: var(--accent-color);
+}
+
+.footer a:hover {
+  color: var(--accent-color);
+}
+
+.icon-background {
+  color: #1f2022;
+}
+
+.footer * > a {
+  margin: 10px 0px;
+}
