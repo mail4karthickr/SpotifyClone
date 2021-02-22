@@ -1,11 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 
 :root {
-  --dark-color: #000000;
+  --header-bg-color: #000000;
+  --header-text-color: #fff;
+  --navbar-link-color: #fff;
+  --hover-color: #00d35b;
   --light-color: #ffffff;
-  --primary-color: #2c3cb5;
-  --accent-color: #00d35b;
-  --accent-color-brightness: #2d3db9;
+  --main-bg-color: #2c3cb5;
+  --main-heading-color: #00d35b;
+  --main-subheading-color: #00d35b;
+  --getSpotify-btn-color: #00d35b;
+  --getSpotify-btn-text-color: #26349a;
+  --footer-background-color: #000000;
   --heading-text-color: #86898b;
   --gray-1: #919496;
 }
@@ -30,34 +36,108 @@ ul {
   list-style-type: none;
 }
 
-.form-control {
-  margin: auto;
-  width: 100%;
-  background-color: blue;
-  align-self: center;
-  padding: 20px;
-  height: 100%;
+.logo {
+  max-width: 140px;
+  max-height: 140px;
 }
 
+/* sidenav */
+.sidenav .container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 5;
+  display: none;
+}
+
+.sidenav .menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  width: 450px;
+  position: fixed;
+  z-index: 6;
+  top: 0px;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  gap: 40px;
+}
+
+.sidenav .menu-container .closebtn {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 100px;
+  font-size: 40px;
+  color: #fff;
+}
+
+.sidenav .menu-container .closebtn:hover {
+  color: #fff;
+}
+
+.sidenav .menu1 a,
+.sidenav .menu2 a {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #fff;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.sidenav .menu2 a {
+  color: #d4d5d7;
+  font-size: 28px;
+}
+
+.sidenav .menu1 a:hover,
+.sidenav .menu2 a:hover {
+  color: var(--hover-color);
+}
+
+.sidenav .logo {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 50px;
+  margin-left: 30px;
+}
+
+.hl {
+  height: 2px;
+  width: 25px;
+  background: #ffffff;
+  display: flex;
+  margin-left: 40px;
+}
+
+/* NavBar */
 .navbar {
   position: fixed;
   top: 0;
   z-index: 1;
   width: 100%;
   padding: 15px;
-  background-color: var(--dark-color);
-  color: #ffffff;
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
   font-weight: bold;
 }
 
-.vl {
-  height: 16px;
-  width: 1px;
-  background: #ffffff;
-  margin: auto 17px;
+.navbar .menu {
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
 }
 
-/* NavBar */
 .navbar .flex {
   justify-content: space-between;
   align-items: center;
@@ -69,26 +149,28 @@ ul {
 }
 
 .navbar a {
-  color: white;
+  color: var(--navbar-link-color);
 }
 
 .navbar a:hover {
-  color: var(--accent-color);
+  color: var(--hover-color);
 }
 
-.logo {
-  max-width: 140px;
-  max-height: 140px;
+.navbar .vl {
+  height: 16px;
+  width: 1px;
+  background: #ffffff;
+  margin: auto 17px;
 }
 
 /* GetSpotify */
 .getSpotify {
   background: url(/images/bursts.svg) no-repeat;
+  background-color: var(--main-bg-color);
   background-size: 175%;
   background-position: 46% 4%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  min-height: 846px;
   height: 100vh;
 }
 
@@ -97,133 +179,145 @@ ul {
   align-items: center;
   justify-content: center;
   gap: 50px;
-  overflow: hidden;
 }
 
 .getSpotify .heading {
   width: 800px;
   text-indent: -2em;
   transform: translate(170px, 0px);
-}
-
-.getSpotify .sm {
-  font-size: 0.8rem;
-}
-
-.getSpotify .md {
-  font-size: 1rem;
-}
-
-.getSpotify .xl {
   font-size: 9rem;
+  line-height: 1;
+  color: var(--main-heading-color);
+}
+
+.getSpotify .subheading {
+  font-size: 1.2rem;
+  color: var(--main-heading-color);
 }
 
 .getSpotify .buyBtn {
-  padding: 10px 30px;
+  padding: 10px 45px;
   transition: 0.3s;
+  background-color: var(--getSpotify-btn-color);
+  color: var(--getSpotify-btn-text-color);
 }
 
 .getSpotify .buyBtn:hover {
   background-color: white;
 }
 
-/* Footer */
+/* footer */
 .footer {
-  padding: 100px 0 0;
-  height: 500px;
-}
-
-.footer .container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
-}
-
-.footer .first-column {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  background-color: var(--footer-background-color);
 }
 
 .footer a {
   color: white;
 }
 
-.company,
-.communities,
-.useful-links {
-  display: flex;
-  flex-direction: column;
-  /* background-color: beige; */
-}
-
-.social-icons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 100%;
-  /* background-color: chartreuse; */
-}
-
-.footer .second-column {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 60px;
-}
-
-.second-column .policy {
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
-}
-
-.fa-stack i:hover {
-  color: var(--accent-color);
-}
-
-.second-column .copyright {
-  display: flex;
-  flex-direction: column;
-}
-
-.second-column .footer a:hover {
-  color: var(--accent-color);
-}
-
-/* Footer */
-
 .footer a:hover {
-  color: var(--accent-color);
+  color: var(--hover-color);
 }
 
-.icon-background {
-  color: #1f2022;
-}
-
-.footer * > a {
-  margin: 10px 0px;
-}
-
-.column-title {
+.title {
   font-size: 12px;
   color: var(--gray-1);
 }
 
-.second-column .policy > *,
-.second-column .copyright > *,
-.second-column .copyright a {
+.footer .container {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 100px;
+  height: 600px;
+}
+
+.footer .grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas:
+    "logo company communities useful-links social-icons social-icons"
+    "policy policy policy . country country";
+}
+
+.footer .logo,
+.footer .company,
+.footer .communities,
+.footer .useful-links,
+.footer .country {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer .logo {
+  grid-area: logo;
+  align-self: flex-start;
+}
+
+.footer .company {
+  grid-area: company;
+  align-self: flex-start;
+}
+
+.footer .communities {
+  grid-area: communities;
+  align-self: flex-start;
+}
+
+.footer .useful-links {
+  grid-area: useful-links;
+  align-self: flex-start;
+}
+
+.footer .social-icons {
+  grid-area: social-icons;
+  justify-self: flex-start;
+}
+
+.social-icons i:hover {
+  color: var(--hover-color);
+}
+
+.footer .social-icons {
+  display: flex;
+  align-self: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.footer .policy {
+  grid-area: policy;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-size: 0.75rem;
+}
+
+.footer .policy a {
   color: var(--gray-1);
 }
 
-@media (max-width: 1200px) {
-  /* .getSpotify .container {
-    padding-top: 250px;
-  } */
+.footer .country {
+  grid-area: country;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 
+.footer .country,
+.footer .country a {
+  font-size: 0.75rem;
+  color: var(--gray-1);
+}
+
+.footer .globe {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
   .getSpotify .heading {
     text-indent: 0em;
     font-size: 94px;
@@ -237,6 +331,7 @@ ul {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    background-color: var(--main-bg-color);
   }
 }
 
@@ -245,8 +340,67 @@ ul {
     display: none;
   }
 
+  .navbar .menu {
+    display: block;
+  }
+
   .logo {
     max-width: 90px;
     max-height: 90px;
+  }
+
+  .footer .container {
+    padding-top: 50px;
+    padding-left: 130px;
+    padding-bottom: 50px;
+  }
+
+  .footer .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 50px;
+    grid-template-areas:
+      "logo logo logo"
+      "company communities useful-links"
+      "social-icons social-icons social-icons"
+      "policy policy country";
+  }
+
+  .footer .social-icons {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 765px) {
+  .getSpotify .heading {
+    text-indent: 0em;
+    font-size: 48px;
+  }
+  .getSpotify .subheading {
+    font-size: 16px;
+  }
+  .getSpotify .flex {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .getSpotify {
+    height: 100vh;
+    text-align: center;
+    background: url(/images/bursts-mobile.svg) no-repeat;
+    background-size: 195%;
+    background-position: top 25% center;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: var(--main-bg-color);
   }
 }

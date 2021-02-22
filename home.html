@@ -15,6 +15,28 @@
     />
   </head>
   <body id="home">
+    <!-- sidenav -->
+    <section class="sidenav">
+      <div class="container">
+        <div class="menu-container">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <div class="menu1">
+            <a href="#">Premium</a>
+            <a href="#">Support</a>
+            <a href="#">Download</a>
+          </div>
+          <div class="hl"></div>
+          <div class="menu2">
+            <a href="#">Sign up</a>
+            <a href="#">Log in</a>
+          </div>
+          <img class="logo" src="./images/logo.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
     <!-- NavBar -->
     <div class="navbar">
       <div class="container flex">
@@ -29,85 +51,90 @@
             <li><a href="./login.html">Log in</a></li>
           </ul>
         </nav>
+        <span class="menu" onclick="openNav()">&#9776;</span>
       </div>
     </div>
 
     <!-- GetSpotify -->
-    <section class="getSpotify bg-primary">
+    <section class="getSpotify">
       <div class="container flex">
-        <h1 class="xl lh-1 fw-bold text-accent heading">
-          Listening is everything
-        </h1>
-        <h4 class="md text-accent">
+        <h1 class="heading">Listening is everything</h1>
+        <h4 class="subheading">
           Millions of songs and podcasts. No credit card needed
         </h4>
-        <a href="" class="sm fw-bold btn buyBtn">GET SPOTIFY FREE</a>
+        <a href="" class="btn buyBtn">GET SPOTIFY FREE</a>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer bg-dark">
-      <div class="container">
-        <div class="first-column">
-          <img class="logo" src="./images/logo.svg" alt="" />
-          <div class="company">
-            <p class="column-title">COMPANY</p>
-            <a href="">About</a>
-            <a href="">Jobs</a>
-            <a href="">For the Record</a>
-          </div>
-          <div class="communities">
-            <p class="column-title">COMMUNITIES</p>
-            <a href="">For Artists</a>
-            <a href="">Developers</a>
-            <a href="">Advertising</a>
-            <a href="">Investors</a>
-            <a href="">Vendors</a>
-          </div>
-          <div class="useful-links">
-            <p class="column-title">USEFUL LINKS</p>
-            <a href="">Support</a>
-            <a href="">Web Player</a>
-            <a href="">Free Mobile App</a>
-          </div>
-          <div class="social-icons">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x icon-background"></i>
-              <a href=""
-                ><i class="fab fa-twitter fa-stack-1x fa-inverse"></i
-              ></a>
-            </span>
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x icon-background"></i>
-              <a href=""
-                ><i class="fab fa-instagram fa-stack-1x fa-inverse"></i
-              ></a>
-            </span>
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x icon-background"></i>
-              <a href=""
-                ><i class="fab fa-facebook fa-stack-1x fa-inverse"></i
-              ></a>
-            </span>
-          </div>
+    <footer class="footer">
+      <div class="container grid">
+        <img class="logo brand" src="./images/logo.svg" alt="" />
+        <div class="company">
+          <p class="title">COMPANY</p>
+          <a href="">About</a>
+          <a href="">Jobs</a>
+          <a href="">For the Record</a>
         </div>
-        <div class="second-column">
-          <div class="policy">
-            <a href="">Legal</a>
-            <a href="">Privacy Center</a>
-            <a href="">Privacy Policy</a>
-            <a href="">Cookies</a>
-            <a href="">About Ads</a>
+        <div class="communities">
+          <p class="title">COMMUNITIES</p>
+          <a href="">For Artists</a>
+          <a href="">Developers</a>
+          <a href="">Advertising</a>
+          <a href="">Investors</a>
+          <a href="">Vendors</a>
+        </div>
+        <div class="useful-links">
+          <p class="title">USEFUL LINKS</p>
+          <a href="">Support</a>
+          <a href="">Web Player</a>
+          <a href="">Free Mobile App</a>
+        </div>
+        <div class="social-icons">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x social-icon-background"></i>
+            <a href=""><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></a>
+          </span>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x social-icon-background"></i>
+            <a href=""
+              ><i class="fab fa-instagram fa-stack-1x fa-inverse"></i
+            ></a>
+          </span>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x social-icon-background"></i>
+            <a href=""
+              ><i class="fab fa-facebook fa-stack-1x fa-inverse"></i
+            ></a>
+          </span>
+        </div>
+        <div class="policy">
+          <a href="">Legal</a>
+          <a href="">PrivacyCenter</a>
+          <a href="">PrivacyPolicy</a>
+          <a href="">Cookies</a>
+          <a href="">About Ads</a>
+        </div>
+        <div class="country">
+          <div class="globe">
+            <i class="fas fa-globe"> </i>
+            <a href="#">India(English)</a>
           </div>
-          <div class="copyright">
-            <span>
-              <i class="fas fa-globe"> </i>
-              <a href="#">India</a>
-            </span>
-            <span>2021 Spotify AB</span>
-          </div>
+          <span>&copy; 2021 Spotify AB</span>
         </div>
       </div>
     </footer>
   </body>
+  <script>
+    const container = document.querySelector(".sidenav .container");
+    const menu = document.querySelector(".sidenav .menu");
+    function openNav() {
+      container.style.display = "block";
+      menu.style.width = "450px";
+    }
+    function closeNav() {
+      container.style.display = "none";
+      menu.style.width = "0px";
+    }
+  </script>
 </html>
